@@ -3,6 +3,7 @@ from rest_framework import generics
 from blog.api.serializers import PostSerializer
 from blog.models import Post
 from .serializers import PostSerializer
+from rest_framework.authtoken import views
 
 class PostView(GenericAPIView):
   serializer_class = PostSerializer
