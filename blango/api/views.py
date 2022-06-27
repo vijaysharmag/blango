@@ -1,14 +1,13 @@
 from django.shortcuts import render
 from rest_framework import generics
-from blog.models import Post
-from .serializers import PostSerializer
+# from .serializers import PostSerializer
 from rest_framework.authtoken import views
 from blog.api.serializers import PostSerializer, UserSerializer, PostDetailSerializer
 from blog.api.permissions import AuthorModifyOrReadOnly, IsAdminUserForObject
 
 
 class PostView(GenericAPIView):
-  serializer_class = PostSerializer
+  # serializer_class = PostSerializer
 
   def get(self, request, format=None):
     serializer = self.serializer_class(data=request.data)
